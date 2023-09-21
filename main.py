@@ -13,9 +13,9 @@ data = pd.read_csv('chess_data/csv/chess.csv')
 
 
 #   Classes converted to number
-data['species'] = data['species'].replace('setosa', 0.0)
-data['species'] = data['species'].replace('versicolor', 1.0)
-data['species'] = data['species'].replace('virginica', 2.0)
+#data['san_moves'] = data['san_moves'].replace('setosa', 0.0)
+#data['san_moves'] = data['san_moves'].replace('versicolor', 1.0)
+#data['san_moves'] = data['san_moves'].replace('virginica', 2.0)
 
 
 #   Setuping out X and y data
