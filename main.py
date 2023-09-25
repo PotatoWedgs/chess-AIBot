@@ -11,16 +11,9 @@ import numpy as np
 #   Our Iris dataset
 data = pd.read_csv('chess_data/csv/chess.csv')
 
-
-#   Classes converted to number
-#data['san_moves'] = data['san_moves'].replace('setosa', 0.0)
-#data['san_moves'] = data['san_moves'].replace('versicolor', 1.0)
-#data['san_moves'] = data['san_moves'].replace('virginica', 2.0)
-
-
 #   Setuping out X and y data
-X = data.drop('san_moves', axis=1)
-y = data['san_moves']
+X = data.drop('move_range_num', axis=1)
+y = data['move_range_num']
 
 X = np.array(X)
 y = np.array(y)
