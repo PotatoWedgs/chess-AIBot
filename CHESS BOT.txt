@@ -1,0 +1,8 @@
+CHESS BOT
+
+	King = 0 - 63
+	Queen = 64 - 128 
+	Rook = 129 - 193 
+	Bishop = 194 - 258 
+	Knight = 259 - 323 
+	Pawn 1 = 324 - 388 
