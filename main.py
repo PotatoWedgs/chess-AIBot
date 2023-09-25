@@ -18,7 +18,9 @@ y = data['move_range_num']
 X = np.array(X)
 y = np.array(y)
 
+print(X)
 
+"""
 #   Train and Test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=41)
 
@@ -39,7 +41,7 @@ class ChessNeuralNetwork(nn.Module):
             nn.LeakyReLU(),
             nn.Linear(100, 100),
             nn.LeakyReLU(),
-            nn.Linear(100, 4096),
+            nn.Linear(100, 388),
             nn.Softmax()
         )
 
@@ -89,3 +91,4 @@ if __name__ == "__main__":
                 print(f'{iteration+1}.) {str(y_val)},       {y_test[iteration]},    Wrong')
 
         print(f'We got {correct}/{len(X_test)} correct')
+"""

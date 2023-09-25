@@ -233,6 +233,6 @@ def convert(pgn, csv):
 
     df['move_range_num'] = raw_list_moves(pgn)
 
-    df.to_csv(csv)
+    df.to_csv(csv, index=False)
 
 convert('chess_data/pgn/chess.pgn', 'chess_data/csv/chess.csv')
