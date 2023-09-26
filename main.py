@@ -3,13 +3,12 @@ import torch
 import pandas as pd
 from torch import nn
 from torch.optim import Adam
-from torch.utils.data import DataLoader
 from sklearn.model_selection import train_test_split
 import torch
 import numpy as np
 
 #   Our Iris dataset
-data = pd.read_csv('chess_data/csv/chess.csv')
+data = pd.read_csv('chess_data/csv/game1.csv')
 
 #   Setuping out X and y data
 X = data.drop('move_range_num', axis=1)
@@ -18,9 +17,6 @@ y = data['move_range_num']
 X = np.array(X)
 y = np.array(y)
 
-print(X)
-
-"""
 #   Train and Test split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=41)
 
@@ -57,8 +53,10 @@ criterion = nn.CrossEntropyLoss()
 # Training/Testing flow 
 if __name__ == "__main__": 
 
+
+
     #   Training through 10000 epochs
-    for i in range(2):
+    for i in range(10000):
 
 
         #   Predicting and finding the loss
@@ -67,8 +65,8 @@ if __name__ == "__main__":
 
 
         #   Printing the loss
-        #if i % 10 == 0:
-            #print(f'Epoch: {i} and loss: {loss}')
+        if i % 10 == 0:
+            print(f'Epoch: {i} and loss: {loss}')
 
 
         #   Back propogation
@@ -91,4 +89,5 @@ if __name__ == "__main__":
                 print(f'{iteration+1}.) {str(y_val)},       {y_test[iteration]},    Wrong')
 
         print(f'We got {correct}/{len(X_test)} correct')
-"""
+
+    #torch.save(model.state_dict(), 'model.pt')
