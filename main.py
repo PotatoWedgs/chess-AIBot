@@ -37,7 +37,7 @@ class ChessNeuralNetwork(nn.Module):
             nn.LeakyReLU(),
             nn.Linear(100, 100),
             nn.LeakyReLU(),
-            nn.Linear(100, 388),
+            nn.Linear(100, 4096),
             nn.Softmax()
         )
 
