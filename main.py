@@ -11,7 +11,7 @@ import os
 #   Our Chess dataset
 data_frames = []
 
-for i in range(500):
+for i in range(10):
     file_path = f'chess_data/traincsv/game{i+1}.csv'
     if os.path.exists(file_path):
         data_frames.append(pd.read_csv(file_path))
