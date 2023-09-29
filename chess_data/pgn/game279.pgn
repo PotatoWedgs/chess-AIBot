@@ -1,0 +1,18 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.05.20"]
+[Round "-"]
+[White "PotatoWedgesBinAmmo"]
+[Black "Zechodian"]
+[Result "0-1"]
+[WhiteElo "379"]
+[BlackElo "409"]
+[TimeControl "180+2"]
+[EndTime "3:56:12 PDT"]
+[Termination "Zechodian won by resignation"]
+
+1. d3 {[%clk 0:03:02]} 1... d5 {[%clk 0:03:00.1]} 2. Nf3 {[%clk 0:03:02.7]} 2...
+c5 {[%clk 0:02:58.3]} 3. Nc3 {[%clk 0:02:55.8]} 3... Nc6 {[%clk 0:02:55.2]} 4.
+d4 {[%clk 0:02:50.3]} 4... Bg4 {[%clk 0:02:48.7]} 5. e4 {[%clk 0:02:33.4]} 5...
+Nf6 {[%clk 0:02:36.2]} 6. e5 {[%clk 0:02:29.2]} 6... cxd4 {[%clk 0:02:36.5]} 7.
+Nxd4 {[%clk 0:02:29]} 7... Bxd1 {[%clk 0:02:33.4]} 0-1

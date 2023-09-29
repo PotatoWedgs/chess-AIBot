@@ -1,0 +1,21 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.08.15"]
+[Round "-"]
+[White "mazarsenal"]
+[Black "PotatoWedgesBinAmmo"]
+[Result "1-0"]
+[WhiteElo "393"]
+[BlackElo "421"]
+[TimeControl "180+2"]
+[EndTime "0:59:14 PDT"]
+[Termination "mazarsenal won by resignation"]
+
+1. e4 {[%clk 0:03:02]} 1... Nf6 {[%clk 0:03:02]} 2. Nf3 {[%clk 0:03:03.5]} 2...
+d5 {[%clk 0:03:02.3]} 3. Nc3 {[%clk 0:03:04.9]} 3... dxe4 {[%clk 0:02:56.7]} 4.
+Ne5 {[%clk 0:03:02.7]} 4... Be6 {[%clk 0:02:49.6]} 5. Be2 {[%clk 0:02:57.4]}
+5... Nc6 {[%clk 0:02:39.4]} 6. Nxc6 {[%clk 0:02:54.7]} 6... bxc6 {[%clk
+0:02:40.9]} 7. O-O {[%clk 0:02:54.8]} 7... Bf5 {[%clk 0:02:36.5]} 8. d3 {[%clk
+0:02:51]} 8... exd3 {[%clk 0:02:33.4]} 9. cxd3 {[%clk 0:02:48.5]} 9... e5 {[%clk
+0:02:06.5]} 10. Bg5 {[%clk 0:02:49.2]} 10... h6 {[%clk 0:02:04.6]} 11. Bxf6
+{[%clk 0:02:50]} 1-0

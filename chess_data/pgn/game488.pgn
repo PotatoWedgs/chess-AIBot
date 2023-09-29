@@ -1,0 +1,14 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.04.05"]
+[Round "-"]
+[White "yyyhhhbbb"]
+[Black "PotatoWedgesBinAmmo"]
+[Result "0-1"]
+[WhiteElo "396"]
+[BlackElo "385"]
+[TimeControl "600+5"]
+[EndTime "11:09:33 PDT"]
+[Termination "PotatoWedgesBinAmmo won - game abandoned"]
+
+1. e4 {[%clk 0:10:05]} 1... Nf6 {[%clk 0:09:56.3]} 0-1

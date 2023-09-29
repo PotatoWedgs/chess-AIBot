@@ -1,0 +1,18 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.07.18"]
+[Round "-"]
+[White "gizemkkk"]
+[Black "PotatoWedgesBinAmmo"]
+[Result "0-1"]
+[WhiteElo "568"]
+[BlackElo "690"]
+[TimeControl "900+10"]
+[EndTime "6:54:05 PDT"]
+[Termination "PotatoWedgesBinAmmo won by checkmate"]
+
+1. e4 {[%clk 0:15:09.8]} 1... Nf6 {[%clk 0:15:09.6]} 2. f3 {[%clk 0:15:18]} 2...
+d5 {[%clk 0:15:18.6]} 3. d4 {[%clk 0:15:08.6]} 3... dxe4 {[%clk 0:15:24.2]} 4.
+fxe4 {[%clk 0:15:15.7]} 4... Nxe4 {[%clk 0:15:32.9]} 5. Bd3 {[%clk 0:15:13.5]}
+5... Qxd4 {[%clk 0:15:37.6]} 6. Nf3 {[%clk 0:15:16]} 6... Qf2# {[%clk
+0:15:34.8]} 0-1

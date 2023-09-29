@@ -1,0 +1,19 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.06.29"]
+[Round "-"]
+[White "PotatoWedgesBinAmmo"]
+[Black "KaiChak"]
+[Result "0-1"]
+[WhiteElo "353"]
+[BlackElo "281"]
+[TimeControl "60+1"]
+[EndTime "8:40:56 PDT"]
+[Termination "KaiChak won - game abandoned"]
+
+1. d4 {[%clk 0:01:01]} 1... d5 {[%clk 0:00:59.3]} 2. Bf4 {[%clk 0:01:01.6]} 2...
+Nc6 {[%clk 0:00:56]} 3. e3 {[%clk 0:01:02.2]} 3... e5 {[%clk 0:00:56.1]} 4. c4
+{[%clk 0:01:02.8]} 4... exf4 {[%clk 0:00:55.4]} 5. exf4 {[%clk 0:01:02.3]} 5...
+dxc4 {[%clk 0:00:54.9]} 6. Qe2+ {[%clk 0:01:02.7]} 6... Nce7 {[%clk 0:00:50.2]}
+7. Qxc4 {[%clk 0:01:02.2]} 7... Be6 {[%clk 0:00:45.7]} 8. Nf3 {[%clk 0:01:00]}
+8... Bxc4 {[%clk 0:00:45]} 0-1

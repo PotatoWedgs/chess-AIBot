@@ -1,0 +1,19 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.04.26"]
+[Round "-"]
+[White "PotatoWedgesBinAmmo"]
+[Black "bobhorse12"]
+[Result "1-0"]
+[WhiteElo "380"]
+[BlackElo "253"]
+[TimeControl "300"]
+[EndTime "4:17:55 PDT"]
+[Termination "PotatoWedgesBinAmmo won - game abandoned"]
+
+1. d4 {[%clk 0:04:59]} 1... e5 {[%clk 0:04:59.3]} 2. e4 {[%clk 0:04:57.3]} 2...
+exd4 {[%clk 0:04:57]} 3. Qxd4 {[%clk 0:04:56.6]} 3... Na6 {[%clk 0:04:43.8]} 4.
+Nf3 {[%clk 0:04:54.3]} 4... Bc5 {[%clk 0:04:36.5]} 5. Qe5+ {[%clk 0:04:49.5]}
+5... Ne7 {[%clk 0:04:25.4]} 6. Qxg7 {[%clk 0:04:47.8]} 6... Ng6 {[%clk 0:04:15]}
+7. Ne5 {[%clk 0:04:44.7]} 7... Ke7 {[%clk 0:04:05.4]} 8. Bg5+ {[%clk 0:04:40.3]}
+1-0

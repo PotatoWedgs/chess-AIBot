@@ -1,0 +1,17 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.03.31"]
+[Round "-"]
+[White "mohannad110"]
+[Black "PotatoWedgesBinAmmo"]
+[Result "1-0"]
+[WhiteElo "243"]
+[BlackElo "369"]
+[TimeControl "900+10"]
+[EndTime "14:21:23 PDT"]
+[Termination "mohannad110 won by resignation"]
+
+1. d4 {[%clk 0:15:10]} 1... d5 {[%clk 0:15:10]} 2. Nc3 {[%clk 0:15:16.2]} 2...
+Nf6 {[%clk 0:15:16.7]} 3. Bg5 {[%clk 0:15:23.6]} 3... h6 {[%clk 0:14:48.5]} 4.
+Bh4 {[%clk 0:15:22.7]} 4... Nfd7 {[%clk 0:14:47]} 5. e3 {[%clk 0:15:30.7]} 5...
+e6 {[%clk 0:14:55.1]} 6. Bxd8 {[%clk 0:15:32.3]} 1-0

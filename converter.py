@@ -2,6 +2,17 @@ import chess
 import chess.pgn
 import pandas as pd
 
+def split_pgn(input_pgn, directory_output, num):
+    with open(input_pgn, "r") as file:
+        pgn_text = file.read()
+
+    games = pgn_text.split("\n\n[Event ")
+
+    for i, game in enumerate(games):  # Skip the first element (empty string)
+        game = "[Event " + game  # Restore the lost tag
+        with open(f"{directory_output}game{i + (num*50) + 1}.pgn", "w") as game_file:
+            game_file.write(game)
+
 def convert(pgn, csv):
     game = chess.pgn.read_game(open(pgn))
     board = game.board()
@@ -115,4 +126,12 @@ def convert(pgn, csv):
 
     df.to_csv(csv, index=False)
 
-convert('chess_data/pgn/game1.pgn', 'chess_data/csv/game1.csv')
+
+#for num in range(10):
+    #split_pgn(f"chess_data/pgn_packed/chess_com_games_2023-09-28 ({num}).pgn", "chess_data/pgn/", num)
+
+i = 0
+
+while i < 500:
+    convert(f'chess_data/pgn/game{i+1}.pgn', f'chess_data/traincsv/game{i+1}.csv')
+    i += 1

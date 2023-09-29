@@ -1,0 +1,21 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.03.30"]
+[Round "-"]
+[White "souloversubstance"]
+[Black "PotatoWedgesBinAmmo"]
+[Result "1-0"]
+[WhiteElo "359"]
+[BlackElo "391"]
+[TimeControl "900+10"]
+[EndTime "9:26:51 PDT"]
+[Termination "souloversubstance won by checkmate"]
+
+1. e4 {[%clk 0:15:07.8]} 1... e5 {[%clk 0:15:07.2]} 2. Nf3 {[%clk 0:15:14.4]}
+2... Nc6 {[%clk 0:15:15.9]} 3. Nc3 {[%clk 0:15:20]} 3... f5 {[%clk 0:15:22.4]}
+4. d3 {[%clk 0:15:23.6]} 4... fxe4 {[%clk 0:15:28.8]} 5. dxe4 {[%clk 0:15:31.9]}
+5... Nf6 {[%clk 0:15:36]} 6. Bc4 {[%clk 0:15:38.3]} 6... Nxe4 {[%clk 0:15:40.9]}
+7. Nxe4 {[%clk 0:15:42.8]} 7... Bb4+ {[%clk 0:15:42.7]} 8. c3 {[%clk 0:15:48.6]}
+8... Be7 {[%clk 0:15:48.4]} 9. Qd5 {[%clk 0:15:42.8]} 9... d6 {[%clk 0:15:42.4]}
+10. Qf7+ {[%clk 0:15:51.7]} 10... Kd7 {[%clk 0:15:44.3]} 11. Be6# {[%clk
+0:15:54.1]} 1-0

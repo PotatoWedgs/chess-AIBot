@@ -1,0 +1,14 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.08.16"]
+[Round "-"]
+[White "Riyanchesss"]
+[Black "PotatoWedgesBinAmmo"]
+[Result "0-1"]
+[WhiteElo "435"]
+[BlackElo "432"]
+[TimeControl "180+2"]
+[EndTime "1:26:53 PDT"]
+[Termination "PotatoWedgesBinAmmo won by resignation"]
+
+1. e4 {[%clk 0:03:02]} 1... Nf6 {[%clk 0:03:02]} 0-1

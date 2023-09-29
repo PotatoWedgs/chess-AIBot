@@ -1,0 +1,16 @@
+[Event [Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.07.23"]
+[Round "-"]
+[White "PotatoWedgesBinAmmo"]
+[Black "narendrakumarpppp"]
+[Result "0-1"]
+[WhiteElo "419"]
+[BlackElo "386"]
+[TimeControl "300"]
+[EndTime "10:50:14 PDT"]
+[Termination "narendrakumarpppp won by resignation"]
+
+1. d4 {[%clk 0:04:58.9]} 1... d5 {[%clk 0:04:58.6]} 2. Bf4 {[%clk 0:04:58.1]}
+2... e6 {[%clk 0:04:56.9]} 3. e3 {[%clk 0:04:57.3]} 3... c5 {[%clk 0:04:53.4]}
+4. c4 {[%clk 0:04:50]} 4... cxd4 {[%clk 0:04:51.8]} 0-1

@@ -1,0 +1,22 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.08.12"]
+[Round "-"]
+[White "Perkiner"]
+[Black "PotatoWedgesBinAmmo"]
+[Result "1-0"]
+[WhiteElo "527"]
+[BlackElo "423"]
+[TimeControl "300"]
+[EndTime "13:41:53 PDT"]
+[Termination "Perkiner won by resignation"]
+
+1. e4 {[%clk 0:04:54.4]} 1... Nf6 {[%clk 0:04:57.5]} 2. e5 {[%clk 0:04:37.9]}
+2... Nd5 {[%clk 0:04:52.8]} 3. Nf3 {[%clk 0:04:36.3]} 3... d6 {[%clk 0:04:47.8]}
+4. Bc4 {[%clk 0:04:34.4]} 4... dxe5 {[%clk 0:04:39]} 5. Nxe5 {[%clk 0:04:29.3]}
+5... Be6 {[%clk 0:04:19.3]} 6. Nc3 {[%clk 0:04:19.5]} 6... Nxc3 {[%clk
+0:04:11.6]} 7. bxc3 {[%clk 0:04:09.7]} 7... Bxc4 {[%clk 0:04:05.2]} 8. Nxc4
+{[%clk 0:04:07.5]} 8... Nc6 {[%clk 0:04:00.6]} 9. d4 {[%clk 0:04:03.3]} 9... e5
+{[%clk 0:03:46.5]} 10. O-O {[%clk 0:03:31.2]} 10... exd4 {[%clk 0:03:19.1]} 11.
+Re1+ {[%clk 0:03:25.2]} 11... Be7 {[%clk 0:03:09]} 12. Ba3 {[%clk 0:03:12.8]}
+12... O-O {[%clk 0:02:49.1]} 13. Bxe7 {[%clk 0:02:58.2]} 1-0

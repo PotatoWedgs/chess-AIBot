@@ -1,0 +1,20 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.06.19"]
+[Round "-"]
+[White "Titans41"]
+[Black "PotatoWedgesBinAmmo"]
+[Result "1-0"]
+[WhiteElo "322"]
+[BlackElo "328"]
+[TimeControl "60+1"]
+[EndTime "11:58:09 PDT"]
+[Termination "Titans41 won by resignation"]
+
+1. e4 {[%clk 0:01:01]} 1... Nf6 {[%clk 0:01:01]} 2. Nc3 {[%clk 0:00:57.7]} 2...
+d5 {[%clk 0:01:01.7]} 3. f3 {[%clk 0:00:55.5]} 3... dxe4 {[%clk 0:00:59.2]} 4.
+Bc4 {[%clk 0:00:56]} 4... Nc6 {[%clk 0:00:58.6]} 5. fxe4 {[%clk 0:00:53.8]} 5...
+e5 {[%clk 0:00:57.8]} 6. Nf3 {[%clk 0:00:53.2]} 6... Bd7 {[%clk 0:00:53.3]} 7.
+Ng5 {[%clk 0:00:52.4]} 7... Qe7 {[%clk 0:00:47.6]} 8. Bxf7+ {[%clk 0:00:46.3]}
+8... Kd8 {[%clk 0:00:43.1]} 9. Bc4 {[%clk 0:00:39.1]} 9... Nd4 {[%clk
+0:00:31.3]} 10. Nf7+ {[%clk 0:00:36]} 1-0

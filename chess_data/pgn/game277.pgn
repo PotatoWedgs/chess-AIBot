@@ -1,0 +1,21 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.05.20"]
+[Round "-"]
+[White "PotatoWedgesBinAmmo"]
+[Black "chicunicuni"]
+[Result "0-1"]
+[WhiteElo "395"]
+[BlackElo "463"]
+[TimeControl "180+2"]
+[EndTime "3:45:22 PDT"]
+[Termination "chicunicuni won by resignation"]
+
+1. d4 {[%clk 0:03:02]} 1... Nf6 {[%clk 0:02:58.3]} 2. Bf4 {[%clk 0:03:03.4]}
+2... Nc6 {[%clk 0:02:56.4]} 3. e3 {[%clk 0:03:04.7]} 3... d5 {[%clk 0:02:48.8]}
+4. c4 {[%clk 0:03:05.2]} 4... dxc4 {[%clk 0:02:48.2]} 5. Bxc4 {[%clk 0:03:05.3]}
+5... Na5 {[%clk 0:02:46.6]} 6. Qa4+ {[%clk 0:03:03.6]} 6... Nc6 {[%clk
+0:02:41.2]} 7. Nf3 {[%clk 0:02:58]} 7... a6 {[%clk 0:02:33.1]} 8. Bd3 {[%clk
+0:02:48]} 8... b5 {[%clk 0:02:30]} 9. Qb4 {[%clk 0:02:41.1]} 9... Nxb4 {[%clk
+0:02:30.2]} 10. O-O {[%clk 0:02:41.4]} 10... Nxd3 {[%clk 0:02:29.6]} 11. Nc3
+{[%clk 0:02:33.4]} 11... Nxb2 {[%clk 0:02:20.7]} 0-1

@@ -1,0 +1,18 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.08.16"]
+[Round "-"]
+[White "PotatoWedgesBinAmmo"]
+[Black "YuSuFEymenK06"]
+[Result "0-1"]
+[WhiteElo "415"]
+[BlackElo "415"]
+[TimeControl "180+2"]
+[EndTime "1:30:45 PDT"]
+[Termination "YuSuFEymenK06 won by resignation"]
+
+1. d4 {[%clk 0:03:02]} 1... d5 {[%clk 0:02:56.6]} 2. c4 {[%clk 0:03:02.7]} 2...
+Bf5 {[%clk 0:02:57.4]} 3. g3 {[%clk 0:02:59.7]} 3... Be4 {[%clk 0:02:55.2]} 4.
+Nf3 {[%clk 0:02:58.9]} 4... Nc6 {[%clk 0:02:54]} 5. Bg2 {[%clk 0:02:58.9]} 5...
+Nb4 {[%clk 0:02:51.1]} 6. Qd2 {[%clk 0:02:41.3]} 6... Nc2+ {[%clk 0:02:49.9]}
+0-1

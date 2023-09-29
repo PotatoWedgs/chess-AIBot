@@ -1,0 +1,24 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.05.28"]
+[Round "-"]
+[White "lxminara"]
+[Black "PotatoWedgesBinAmmo"]
+[Result "0-1"]
+[WhiteElo "201"]
+[BlackElo "318"]
+[TimeControl "60+1"]
+[EndTime "5:27:41 PDT"]
+[Termination "PotatoWedgesBinAmmo won by checkmate"]
+
+1. e4 {[%clk 0:01:01]} 1... Nf6 {[%clk 0:01:00.9]} 2. f4 {[%clk 0:01:00.1]} 2...
+d5 {[%clk 0:00:59.8]} 3. exd5 {[%clk 0:00:59.3]} 3... Nxd5 {[%clk 0:00:58.4]} 4.
+Nf3 {[%clk 0:00:58]} 4... Bf5 {[%clk 0:00:55.3]} 5. Ne5 {[%clk 0:00:57.3]} 5...
+Be6 {[%clk 0:00:46.5]} 6. c4 {[%clk 0:00:54.4]} 6... Nc6 {[%clk 0:00:46]} 7.
+cxd5 {[%clk 0:00:54]} 7... Bxd5 {[%clk 0:00:46.2]} 8. Qa4 {[%clk 0:00:47.1]}
+8... f6 {[%clk 0:00:41]} 9. Bc4 {[%clk 0:00:39]} 9... fxe5 {[%clk 0:00:35.5]}
+10. Bxd5 {[%clk 0:00:38.1]} 10... Qxd5 {[%clk 0:00:35.7]} 11. O-O {[%clk
+0:00:30.5]} 11... O-O-O {[%clk 0:00:32.4]} 12. fxe5 {[%clk 0:00:30.3]} 12...
+Qxe5 {[%clk 0:00:30.6]} 13. Nc3 {[%clk 0:00:27.2]} 13... e6 {[%clk 0:00:24.4]}
+14. Nb5 {[%clk 0:00:26.4]} 14... a6 {[%clk 0:00:23.1]} 15. Re1 {[%clk
+0:00:25.3]} 15... Qxe1# {[%clk 0:00:20.9]} 0-1

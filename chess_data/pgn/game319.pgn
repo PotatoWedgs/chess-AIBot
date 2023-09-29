@@ -1,0 +1,16 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.04.29"]
+[Round "-"]
+[White "PotatoWedgesBinAmmo"]
+[Black "lulucrecia"]
+[Result "1-0"]
+[WhiteElo "378"]
+[BlackElo "231"]
+[TimeControl "300"]
+[EndTime "15:11:28 PDT"]
+[Termination "PotatoWedgesBinAmmo won by resignation"]
+
+1. d4 {[%clk 0:04:55.6]} 1... e6 {[%clk 0:04:59.8]} 2. Bf4 {[%clk 0:04:54.9]}
+2... f5 {[%clk 0:04:49.7]} 3. e3 {[%clk 0:04:53.4]} 3... Nc6 {[%clk 0:04:43]} 4.
+c4 {[%clk 0:04:51.9]} 4... Nb4 {[%clk 0:04:37.6]} 5. Qb3 {[%clk 0:04:38.4]} 1-0

@@ -1,0 +1,19 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.05.28"]
+[Round "-"]
+[White "T1mberlack3"]
+[Black "PotatoWedgesBinAmmo"]
+[Result "1-0"]
+[WhiteElo "408"]
+[BlackElo "319"]
+[TimeControl "60+1"]
+[EndTime "5:37:26 PDT"]
+[Termination "T1mberlack3 won by resignation"]
+
+1. e4 {[%clk 0:01:01]} 1... Nf6 {[%clk 0:01:01]} 2. Qf3 {[%clk 0:01:01.4]} 2...
+d5 {[%clk 0:00:59.5]} 3. exd5 {[%clk 0:01:01.2]} 3... Qxd5 {[%clk 0:00:58.7]} 4.
+Nc3 {[%clk 0:00:56.6]} 4... Qxf3 {[%clk 0:00:58]} 5. gxf3 {[%clk 0:00:57.5]}
+5... Nc6 {[%clk 0:00:56]} 6. f4 {[%clk 0:00:55.1]} 6... Bf5 {[%clk 0:00:55.8]}
+7. f3 {[%clk 0:00:53.9]} 7... O-O-O {[%clk 0:00:55.3]} 8. h4 {[%clk 0:00:49.6]}
+8... h5 {[%clk 0:00:51.8]} 9. Nh3 {[%clk 0:00:48.6]} 1-0

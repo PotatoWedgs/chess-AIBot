@@ -1,0 +1,19 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.05.04"]
+[Round "-"]
+[White "PotatoWedgesBinAmmo"]
+[Black "Wolfseye06"]
+[Result "1/2-1/2"]
+[WhiteElo "460"]
+[BlackElo "456"]
+[TimeControl "900+10"]
+[EndTime "5:35:05 PDT"]
+[Termination "Game drawn by agreement"]
+
+1. d4 {[%clk 0:15:10]} 1... d5 {[%clk 0:15:09.9]} 2. Bf4 {[%clk 0:15:19.6]} 2...
+f6 {[%clk 0:15:00.6]} 3. e3 {[%clk 0:15:27.6]} 3... e5 {[%clk 0:15:09.2]} 4. Bg3
+{[%clk 0:15:36.1]} 4... e4 {[%clk 0:15:13.8]} 5. c4 {[%clk 0:15:42.8]} 5... Bb4+
+{[%clk 0:14:43.5]} 6. Nc3 {[%clk 0:15:47.4]} 6... dxc4 {[%clk 0:14:51.6]} 7.
+Bxc4 {[%clk 0:15:55.2]} 7... f5 {[%clk 0:14:41.4]} 8. Ne2 {[%clk 0:15:56]} 8...
+Nf6 {[%clk 0:14:12.6]} 1/2-1/2

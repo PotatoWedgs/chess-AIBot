@@ -1,0 +1,22 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.05.15"]
+[Round "-"]
+[White "PotatoWedgesBinAmmo"]
+[Black "MrTacoRVH"]
+[Result "0-1"]
+[WhiteElo "418"]
+[BlackElo "515"]
+[TimeControl "180+2"]
+[EndTime "9:42:23 PDT"]
+[Termination "MrTacoRVH won by resignation"]
+
+1. d4 {[%clk 0:03:02]} 1... Nf6 {[%clk 0:03:01.9]} 2. Bf4 {[%clk 0:03:03]} 2...
+g6 {[%clk 0:03:01.9]} 3. e3 {[%clk 0:03:04.5]} 3... Bg7 {[%clk 0:03:03.2]} 4. c4
+{[%clk 0:03:06]} 4... d6 {[%clk 0:03:04.8]} 5. Nc3 {[%clk 0:03:07.3]} 5... O-O
+{[%clk 0:03:03.2]} 6. Nf3 {[%clk 0:03:08.8]} 6... b6 {[%clk 0:03:00.7]} 7. Bd3
+{[%clk 0:03:05.8]} 7... Bb7 {[%clk 0:03:01.7]} 8. h3 {[%clk 0:03:05.6]} 8... c5
+{[%clk 0:03:02.7]} 9. O-O {[%clk 0:03:06]} 9... cxd4 {[%clk 0:03:03.6]} 10. exd4
+{[%clk 0:03:07.2]} 10... Nbd7 {[%clk 0:02:28.9]} 11. Re1 {[%clk 0:01:53.4]}
+11... Re8 {[%clk 0:02:28]} 12. c5 {[%clk 0:01:45.2]} 12... bxc5 {[%clk
+0:02:22.2]} 13. d5 {[%clk 0:01:29.8]} 0-1

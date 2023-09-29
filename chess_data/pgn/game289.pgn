@@ -1,0 +1,18 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.05.22"]
+[Round "-"]
+[White "KarlKoalaXIII"]
+[Black "PotatoWedgesBinAmmo"]
+[Result "0-1"]
+[WhiteElo "332"]
+[BlackElo "310"]
+[TimeControl "60+1"]
+[EndTime "11:32:00 PDT"]
+[Termination "PotatoWedgesBinAmmo won by resignation"]
+
+1. e4 {[%clk 0:01:00.2]} 1... Nf6 {[%clk 0:00:59.8]} 2. d3 {[%clk 0:00:59.8]}
+2... d5 {[%clk 0:00:59.5]} 3. exd5 {[%clk 0:00:59.1]} 3... Nxd5 {[%clk
+0:00:59.3]} 4. Nc3 {[%clk 0:01:00]} 4... e6 {[%clk 0:00:55.4]} 5. Nxd5 {[%clk
+0:00:52.7]} 5... Qxd5 {[%clk 0:00:54.9]} 6. Nf3 {[%clk 0:00:53.6]} 6... Nc6
+{[%clk 0:00:53.8]} 7. c4 {[%clk 0:00:52.8]} 0-1

@@ -1,0 +1,15 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.04.14"]
+[Round "-"]
+[White "PotatoWedgesBinAmmo"]
+[Black "mgggggggggggg"]
+[Result "0-1"]
+[WhiteElo "216"]
+[BlackElo "300"]
+[TimeControl "120+1"]
+[EndTime "9:51:26 PDT"]
+[Termination "mgggggggggggg won by resignation"]
+
+1. d4 {[%clk 0:02:01]} 1... e5 {[%clk 0:02:01]} 2. Bf4 {[%clk 0:02:01.4]} 2...
+exf4 {[%clk 0:02:01]} 0-1

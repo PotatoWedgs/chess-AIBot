@@ -1,0 +1,25 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.08.25"]
+[Round "-"]
+[White "PotatoWedgesBinAmmo"]
+[Black "Skeeeebs"]
+[Result "0-1"]
+[WhiteElo "433"]
+[BlackElo "432"]
+[TimeControl "180+2"]
+[EndTime "12:46:06 PDT"]
+[Termination "Skeeeebs won by resignation"]
+
+1. d4 {[%clk 0:03:02]} 1... d5 {[%clk 0:03:01.9]} 2. c4 {[%clk 0:03:03.8]} 2...
+Nf6 {[%clk 0:02:55.9]} 3. Nf3 {[%clk 0:03:03.3]} 3... Nc6 {[%clk 0:02:54.4]} 4.
+cxd5 {[%clk 0:03:00.4]} 4... Nxd5 {[%clk 0:02:53.1]} 5. g3 {[%clk 0:02:58.3]}
+5... Bf5 {[%clk 0:02:44.2]} 6. Nc3 {[%clk 0:02:55.7]} 6... e6 {[%clk 0:02:42.3]}
+7. Nxd5 {[%clk 0:02:54]} 7... exd5 {[%clk 0:02:43.4]} 8. Bg2 {[%clk 0:02:53.1]}
+8... Bd6 {[%clk 0:02:27.3]} 9. O-O {[%clk 0:02:51.3]} 9... O-O {[%clk
+0:02:27.8]} 10. Re1 {[%clk 0:02:50.4]} 10... Nb4 {[%clk 0:02:04.8]} 11. e4
+{[%clk 0:02:03.2]} 11... Bxe4 {[%clk 0:01:59.9]} 12. Nd2 {[%clk 0:01:46.3]}
+12... Nc2 {[%clk 0:01:52.8]} 13. Nxe4 {[%clk 0:01:42]} 13... Nxa1 {[%clk
+0:01:42.8]} 14. Nxd6 {[%clk 0:01:39.3]} 14... Qxd6 {[%clk 0:01:41.7]} 15. Bf4
+{[%clk 0:01:40.6]} 15... Qb4 {[%clk 0:01:35.5]} 16. Qxa1 {[%clk 0:01:39.2]}
+16... Rfe8 {[%clk 0:01:32.9]} 17. a3 {[%clk 0:01:22.8]} 0-1

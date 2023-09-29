@@ -1,0 +1,18 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.05.15"]
+[Round "-"]
+[White "tmejer"]
+[Black "PotatoWedgesBinAmmo"]
+[Result "1-0"]
+[WhiteElo "324"]
+[BlackElo "401"]
+[TimeControl "180+2"]
+[EndTime "9:13:31 PDT"]
+[Termination "tmejer won by resignation"]
+
+1. e4 {[%clk 0:03:02]} 1... e5 {[%clk 0:03:01]} 2. Nc3 {[%clk 0:03:03.3]} 2...
+Nc6 {[%clk 0:03:00]} 3. f4 {[%clk 0:03:04.5]} 3... Nf6 {[%clk 0:02:59.8]} 4.
+fxe5 {[%clk 0:03:04.8]} 4... Nxe5 {[%clk 0:03:00.8]} 5. d4 {[%clk 0:03:03.3]}
+5... Nc6 {[%clk 0:02:45]} 6. e5 {[%clk 0:02:59.7]} 6... Nh5 {[%clk 0:02:34.3]}
+1-0

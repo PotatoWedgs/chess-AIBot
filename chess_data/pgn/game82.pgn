@@ -1,0 +1,17 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.08.15"]
+[Round "-"]
+[White "Horie92"]
+[Black "PotatoWedgesBinAmmo"]
+[Result "1-0"]
+[WhiteElo "426"]
+[BlackElo "404"]
+[TimeControl "180+2"]
+[EndTime "3:16:10 PDT"]
+[Termination "Horie92 won by resignation"]
+
+1. e4 {[%clk 0:03:01.2]} 1... Nf6 {[%clk 0:03:00.7]} 2. e5 {[%clk 0:02:57.4]}
+2... Nd5 {[%clk 0:03:01.3]} 3. a3 {[%clk 0:02:50.6]} 3... d6 {[%clk 0:03:01.3]}
+4. c4 {[%clk 0:02:49.8]} 4... Nb6 {[%clk 0:02:59.2]} 5. d4 {[%clk 0:02:45.5]}
+5... Nxc4 {[%clk 0:02:43]} 1-0

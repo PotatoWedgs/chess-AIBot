@@ -1,0 +1,22 @@
+[Event "Live Chess"]
+[Site "Chess.com"]
+[Date "2023.06.29"]
+[Round "-"]
+[White "marlinmalvadaohttps"]
+[Black "PotatoWedgesBinAmmo"]
+[Result "0-1"]
+[WhiteElo "600"]
+[BlackElo "589"]
+[TimeControl "900+10"]
+[EndTime "9:30:05 PDT"]
+[Termination "PotatoWedgesBinAmmo won by resignation"]
+
+1. e4 {[%clk 0:15:09.8]} 1... Nf6 {[%clk 0:15:08.6]} 2. Nc3 {[%clk 0:15:15.9]}
+2... d5 {[%clk 0:15:16.8]} 3. exd5 {[%clk 0:15:23.2]} 3... Nxd5 {[%clk
+0:15:23.3]} 4. Bc4 {[%clk 0:15:29.9]} 4... Nxc3 {[%clk 0:15:30.3]} 5. dxc3
+{[%clk 0:15:34.4]} 5... Qxd1+ {[%clk 0:15:38.7]} 6. Kxd1 {[%clk 0:15:42.4]} 6...
+Nc6 {[%clk 0:15:46.3]} 7. Bf4 {[%clk 0:15:47.8]} 7... e5 {[%clk 0:15:51.2]} 8.
+Bg3 {[%clk 0:15:55.3]} 8... Bf5 {[%clk 0:15:58.8]} 9. Nf3 {[%clk 0:15:51.7]}
+9... O-O-O+ {[%clk 0:16:04.4]} 10. Nd2 {[%clk 0:15:58.1]} 10... Bc5 {[%clk
+0:16:04.6]} 11. Re1 {[%clk 0:15:58.7]} 11... f6 {[%clk 0:16:05.5]} 12. Ke2
+{[%clk 0:16:00.8]} 0-1
