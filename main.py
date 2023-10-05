@@ -11,13 +11,14 @@ import os
 #   Our Chess dataset
 data_frames = []
 
-for i in range(10):
+for i in range(500): #   For looping over the games from our data
     file_path = f'chess_data/traincsv/game{i+1}.csv'
-    if os.path.exists(file_path):
+    if os.path.exists(file_path):   #   IF file exists in path
         data_frames.append(pd.read_csv(file_path))
 
-data = pd.concat(data_frames)
+data = pd.concat(data_frames)   #   Creating one dataframe
 
+#   A for loop to remove added columns
 for column in data.columns:
     if len(data.columns) > 97:
         if "col" in column:
@@ -51,11 +52,11 @@ class ChessNeuralNetwork(nn.Module):
         super().__init__()
         self.mod = nn.Sequential(
             nn.Linear(96, 100),
-            nn.ReLU(),
+            nn.LeakyReLU(),
             nn.Linear(100, 100),
-            nn.ReLU(),
+            nn.LeakyReLU(),
             nn.Linear(100, 4096),
-            nn.ReLU()
+            nn.Softmax()
         )
 
     def forward(self, x): 
@@ -64,15 +65,13 @@ class ChessNeuralNetwork(nn.Module):
 
 # Instance of the neural network, loss, optimizer 
 model = ChessNeuralNetwork().cuda()
-optimizer = Adam(model.parameters(), lr=0.1)
+optimizer = Adam(model.parameters(), lr=0.01)
 criterion = nn.CrossEntropyLoss() 
 
 # Training/Testing flow 
 if __name__ == "__main__": 
 
-
-
-    #   Training through 10000 epochs
+    #   Training through 100 epochs
     for i in range(100):
 
 
@@ -99,7 +98,7 @@ if __name__ == "__main__":
         for iteration, tensor_data in enumerate(X_test):    
             y_val = model.forward(tensor_data.cuda())  #   Evaluating the test dataset
 
-            if y_val.argmax().item() == y_test[iteration]:
+            if y_val.argmax().item() == y_test[iteration]:  #   IF models chess move aligns with the test data
                 correct += 1
                 print(f'{iteration+1}.) {str(y_val)},       {y_test[iteration]},    Correct')
             else:
@@ -107,4 +106,5 @@ if __name__ == "__main__":
 
         print(f'We got {correct}/{len(X_test)} correct')
 
-    #torch.save(model.state_dict(), 'model.pt')
+    #   Saving the model parameters
+    torch.save(model.state_dict(), 'model.pt')
