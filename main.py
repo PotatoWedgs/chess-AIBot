@@ -27,7 +27,6 @@ for column in data.columns:
     elif len(data.columns) == 97:
         break
 
-
 #   Setuping out X and y data
 X = data.drop('move_range_num', axis=1)
 y = data['move_range_num']
@@ -56,7 +55,6 @@ class ChessNeuralNetwork(nn.Module):
             nn.Linear(100, 100),
             nn.LeakyReLU(),
             nn.Linear(100, 4096),
-            nn.Softmax()
         )
 
     def forward(self, x): 
@@ -67,6 +65,7 @@ class ChessNeuralNetwork(nn.Module):
 model = ChessNeuralNetwork().cuda()
 optimizer = Adam(model.parameters(), lr=0.01)
 criterion = nn.CrossEntropyLoss() 
+
 
 # Training/Testing flow 
 if __name__ == "__main__": 
@@ -102,8 +101,8 @@ if __name__ == "__main__":
                 correct += 1
                 print(f'{iteration+1}.) {str(y_val)},       {y_test[iteration]},    Correct')
             else:
-                print(f'{iteration+1}.) {str(y_val)},       {y_test[iteration]},    Wrong')
-
+                #print(f'{iteration+1}.) {str(y_val)},       {y_test[iteration]},    Wrong')
+                pass
         print(f'We got {correct}/{len(X_test)} correct')
 
     #   Saving the model parameters

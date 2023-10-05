@@ -65,60 +65,60 @@ def convert(username, pgn, csv):
             for element in boardmap:      #   A for loop going over the contents in the board map
 
                 #   ALL these if statements are to record where the pieces are located at
-                if str(boardmap[i]) == 'K':          
+                if str(boardmap[element]) == 'K':          
                     move_dict['WKing'] = element+1
 
 
-                if str(boardmap[i]) == 'Q':            
+                if str(boardmap[element]) == 'Q':            
                     move_dict[f'WQueen{Wqueen_counter}'] = element+1
                     Wqueen_counter += 1
 
 
-                if str(boardmap[i]) == 'R':               
+                if str(boardmap[element]) == 'R':               
                     move_dict[f'WRook{Wrook_counter}'] = element+1
                     Wrook_counter += 1
 
 
-                if str(boardmap[i]) == 'B':                
+                if str(boardmap[element]) == 'B':                
                     move_dict[f'WBishop{Wbishop_counter}'] = element+1
                     Wbishop_counter += 1
 
 
-                if str(boardmap[i]) == 'N':
+                if str(boardmap[element]) == 'N':
                     move_dict[f'WKnight{Wknight_counter}'] = element+1
                     Wknight_counter += 1
 
 
-                if str(boardmap[i]) == 'P':
+                if str(boardmap[element]) == 'P':
                     move_dict[f'WPawn{Wpawn_counter}'] = element+1
                     Wpawn_counter += 1
 
 
-                if str(boardmap[i]) == 'k':
+                if str(boardmap[element]) == 'k':
                     move_dict['BKing'] = element+1
 
 
-                if str(boardmap[i]) == 'q':
+                if str(boardmap[element]) == 'q':
                     move_dict[f'BQueen{Bqueen_counter}'] = element+1
                     Bqueen_counter += 1
 
 
-                if str(boardmap[i]) == 'r':
+                if str(boardmap[element]) == 'r':
                     move_dict[f'BRook{Brook_counter}'] = element+1
                     Brook_counter += 1
 
 
-                if str(boardmap[i]) == 'b':
+                if str(boardmap[element]) == 'b':
                     move_dict[f'BBishop{Bbishop_counter}'] = element+1
                     Bbishop_counter += 1
 
 
-                if str(boardmap[i]) == 'n':
+                if str(boardmap[element]) == 'n':
                     move_dict[f'BKnight{Bknight_counter}'] = element+1
                     Bknight_counter += 1
 
 
-                if str(boardmap[i]) == 'p':
+                if str(boardmap[element]) == 'p':
                     move_dict[f'BPawn{Bpawn_counter}'] = element+1
                     Bpawn_counter += 1
 
@@ -140,7 +140,7 @@ def convert(username, pgn, csv):
 
     if remaining_cols > 0:  #   IF there is remaining columns left, we add columns filled with 0s
         for i in range(len(df.columns), len(df.columns) + remaining_cols):
-            df['col{}'.format(i)] = 0
+            df['col{}'.format(i+1)] = 0
 
     #   Iterating over the moves played to create column of indexed moves through possible combinations
     for move in moves:  
