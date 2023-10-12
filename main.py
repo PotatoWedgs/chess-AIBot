@@ -17,6 +17,7 @@ for i in range(500): #   For looping over the games from our data
         data_frames.append(pd.read_csv(file_path))
 
 data = pd.concat(data_frames)   #   Creating one dataframe
+data = data.fillna(0)    #    Filling all NaN values to 0
 
 #   A for loop to remove added columns
 for column in data.columns:
