@@ -3,7 +3,6 @@ import torch
 import pandas as pd
 from torch import nn
 from torch.optim import Adam
-from sklearn.model_selection import train_test_split
 import torch
 import numpy as np
 import os
@@ -35,16 +34,12 @@ y = data['move_range_num']
 X = np.array(X)
 y = np.array(y)
 
-#   Train and Test split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.1, random_state=41)
-
 #   Converting Train/Test data to Tensors   
 X_train = torch.FloatTensor(X)
-X_test = torch.FloatTensor(X_test)
+X_test = torch.FloatTensor(X)
 
 y_train = torch.LongTensor(y)
-y_test = torch.LongTensor(y_test)
-
+y_test = torch.LongTensor(y)
 
 # Chess Neural Network
 class ChessNeuralNetwork(nn.Module): 
@@ -64,15 +59,15 @@ class ChessNeuralNetwork(nn.Module):
 
 # Instance of the neural network, loss, optimizer 
 model = ChessNeuralNetwork().cuda()
-optimizer = Adam(model.parameters(), lr=0.01)
+optimizer = Adam(model.parameters(), lr=0.001)
 criterion = nn.CrossEntropyLoss() 
 
 
 # Training/Testing flow 
 if __name__ == "__main__": 
 
-    #   Training through 100 epochs
-    for i in range(100):
+    #   Training through 50000 epochs
+    for i in range(50000):
 
 
         #   Predicting and finding the loss
@@ -90,7 +85,7 @@ if __name__ == "__main__":
         loss.backward()
         optimizer.step()
 
-    #   Testing
+    """#   Testing
     with torch.no_grad():   #   Turning off back propogation
 
         correct = 0
@@ -104,7 +99,7 @@ if __name__ == "__main__":
             else:
                 #print(f'{iteration+1}.) {str(y_val)},       {y_test[iteration]},    Wrong')
                 pass
-        print(f'We got {correct}/{len(X_test)} correct')
+        print(f'We got {correct}/{len(X_test)} correct')"""
 
     #   Saving the model parameters
     torch.save(model.state_dict(), 'model.pt')
