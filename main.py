@@ -1,4 +1,5 @@
 # Import dependencies
+from io import StringIO
 import torch 
 import pandas as pd
 from torch import nn
@@ -13,7 +14,7 @@ combinations = [(start, end) for start in range(1, 65) for end in range(1, 65) i
 def convert(username, pgn):
 
     #   Setting up the chess game
-    game = chess.pgn.read_game(open(pgn))
+    game = chess.pgn.read_game(pgn)
     board = game.board()
 
     board_dict = {}     #   The dictionary we will use to append to the output of the conversion   
@@ -142,97 +143,119 @@ def convert(username, pgn):
     return df.to_numpy()
 
 
+if __name__ == "__main__": 
+    #with open('current_game.pgn', 'w') as current_game_pgn:
+    with torch.no_grad():   #   Turning off back propogation
+        board2 = chess.Board()
 
-board2 = chess.Board()
+        username = 'Potato'
+        username_color = 'w'
 
-username = 'Potato'
-username_color = 'w'
+        moves = []
+        move_count = 1
+        square_index = ['', 'a1', 'b1', 'c1', 'd1', 'e1', 'f1', 'g1', 'h1', 'a2', 'b2', 'c2', 'd2', 'e2', 'f2', 'g2', 'h2', 'a3', 'b3', 'c3', 'd3', 'e3', 'f3', 'g3', 'h3', 'a4', 'b4', 'c4', 'd4', 'e4', 'f4', 'g4', 'h4', 'a5', 'b5', 'c5', 'd5', 'e5', 'f5', 'g5', 'h5', 'a6', 'b6', 'c6', 'd6', 'e6', 'f6', 'g6', 'h6', 'a7', 'b7', 'c7', 'd7', 'e7', 'f7', 'g7', 'h7', 'a8', 'b8', 'c8', 'd8', 'e8', 'f8', 'g8', 'h8']
+        moves_str = ''
 
-moves = []
+        bool_color = True
 
-e = 0
+        if username_color == "b":
+            WHITE = "---"
+            BLACK = username
+            bool_color = False
 
-#ch = ['d4', 'e5', 'dxe5', 'Bc5', 'Nc3', 'd6', 'exd6', 'Bxd6', 'Nf3', 'Nc6', 'e4', 'Bb4', 'Bd2', 'Bxc3']
+        elif username_color == "w":
+            WHITE = username
+            BLACK = "---"
+            bool_color = True
 
-move_count = 1
+        new_model = train.ChessNeuralNetwork().cuda()
+        new_model.load_state_dict(torch.load('model.pt'))
 
-square_index = ['', 'a1', 'b1', 'c1', 'd1', 'e1', 'f1', 'g1', 'h1', 'a2', 'b2', 'c2', 'd2', 'e2', 'f2', 'g2', 'h2', 'a3', 'b3', 'c3', 'd3', 'e3', 'f3', 'g3', 'h3', 'a4', 'b4', 'c4', 'd4', 'e4', 'f4', 'g4', 'h4', 'a5', 'b5', 'c5', 'd5', 'e5', 'f5', 'g5', 'h5', 'a6', 'b6', 'c6', 'd6', 'e6', 'f6', 'g6', 'h6', 'a7', 'b7', 'c7', 'd7', 'e7', 'f7', 'g7', 'h7', 'a8', 'b8', 'c8', 'd8', 'e8', 'f8', 'g8', 'h8']
+        while board2.is_checkmate() == False:
 
-moves_str = ''
+            if board2.turn == bool_color:
+                player_move = input('Play move (SAN): ')
 
-new_model = train.ChessNeuralNetwork().cuda()
-new_model.load_state_dict(torch.load('model.pt'))
+                if board2.turn == True:     #   Black
+                    moves.append(f'{move_count}... {player_move}' + ' {[%clk 0:00:00.00]}')
 
-while board2.is_checkmate() == False:
-    if username_color == "b":
-        WHITE = "---"
-        BLACK = username
-        username_color = True
+                    move_count += 1
 
-    elif username_color == "w":
-        WHITE = username
-        BLACK = "---"
-        username_color = False
+                elif board2.turn == False:
+                    moves.append(f'{move_count}. {player_move}' + ' {[%clk 0:00:00.00]}')
 
-    if board2.turn == username_color:
-        player_move = input('Play move (SAN): ')
-        #player_move = ch[e]
 
-        board2.push_san(player_move)
-
-        if board2.turn == True:     #   Black
-            moves.append(f'{move_count}... {player_move}' + ' {[%clk 0:15:09.9]}')
-
-            move_count += 1
-
-        elif board2.turn == False:
-            moves.append(f'{move_count}. {player_move}' + ' {[%clk 0:15:09.9]}')
-
-        moves_str = str(moves).replace("[", "")
-        moves_str = moves_str.replace("]", "")
-        moves_str = moves_str.replace("'", "")
-        moves_str = moves_str.replace(",", "")
-
-    else:
-
-        pgn = f'''[Event "Live Chess"]
-[Site "-"]
-[Date "-"]
-[Round "-"]
-[White "{WHITE}"]
-[Black "{BLACK}"]        
-[Result "0-0"]
-[WhiteElo "0"]
-[BlackElo "0"]
-[TimeControl "0"]
-[EndTime "0"]
-[Termination 0"]
-                
-{moves_str}'''
-
-        with open('current_game.pgn', 'w') as current_game_pgn:
-                current_game_pgn.write(pgn)
-
-        data = convert(username, 'current_game.pgn')
-        data_tensor = torch.FloatTensor(data)
-
-        #   Testing
-        with torch.no_grad():   #   Turning off back propogation
-            correct = 0
+                board2.push_san(player_move)
             
-            for iteration, tensor_data in enumerate(data_tensor):    
-                y_val = new_model.forward(tensor_data.cuda())  #   Evaluating the test dataset
+                moves_str = str(moves).replace("[", "")
+                moves_str = moves_str.replace("]", "")
+                moves_str = moves_str.replace("'", "")
+                moves_str = moves_str.replace(",", "")
 
-                start_square = combinations[y_val.argmax().item()][0]
-                end_square = combinations[y_val.argmax().item()][1]
-
-                print(square_index[start_square], square_index[end_square])
+                pgn = StringIO(f'[Event "Live Chess"] \n[Site "-"] \n[Date "-"] \n[Round "-"] \n[White "{WHITE}"] \n[Black "{BLACK}"] \n[Result "0-0"] \n[WhiteElo "0"] \n[BlackElo "0"] \n[TimeControl "0"] \n[EndTime "0"] \n[Termination 0"] \n\n{moves_str}')
 
 
-            """if y_val.argmax().item() == y_test[iteration]:  #   IF models chess move aligns with the test data
-                correct += 1
-                print(f'{iteration+1}.) {str(y_val.argmax().item())},       {y_test[iteration]},    Correct')
             else:
-                print(f'{iteration+1}.) {str(y_val.argmax().item())},       {y_test[iteration]},    Wrong')
+                #try:
+                
+                moves_str = str(moves).replace("[", "")
+                moves_str = moves_str.replace("]", "")
+                moves_str = moves_str.replace("'", "")
+                moves_str = moves_str.replace(",", "")
 
-        print(f'We got {correct}/{len(X_test)} correct')""" 
+                pgn = StringIO(f'[Event "Live Chess"] \n[Site "-"] \n[Date "-"] \n[Round "-"] \n[White "{WHITE}"] \n[Black "{BLACK}"] \n[Result "0-0"] \n[WhiteElo "0"] \n[BlackElo "0"] \n[TimeControl "0"] \n[EndTime "0"] \n[Termination 0"] \n\n{moves_str}')
+
+                data = convert(username, pgn)
+                data_tensor = torch.FloatTensor(data)
+
+                print(data)
+
+                """except:
+                    print('no')
+                    data = np.array([[64.0,63.0,62.0,61.0,60.0,59.0,58.0,57.0,56.0,55.0,54.0,53.0,52.0,50.0,49.0,35.0,16.0,15.0,14.0,13.0,12.0,11.0,10.0,9.0,8.0,7.0,6.0,5.0,4.0,3.0,2.0,1.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]])
+                    data_tensor = torch.FloatTensor(data)"""
+                            
+                for iteration, tensor_data in enumerate(data_tensor):    
+
+                    y_val = new_model.forward(tensor_data.cuda())  #   Evaluating the test dataset
+
+                    start_square = combinations[y_val.argmax().item()][0]
+                    end_square = combinations[y_val.argmax().item()][1]
+
+                    uci = chess.Move.from_uci(f'{square_index[start_square]}{square_index[end_square]}')
+                    bot_move = board2.san(uci)
+
+
+                    if board2.turn == True:     #   Black
+                        moves.append(f'{move_count}... {bot_move}' + ' {[%clk 0:00:00.00]}')
+
+                        move_count += 1
+
+                    elif board2.turn == False:
+                        moves.append(f'{move_count}. {bot_move}' + ' {[%clk 0:00:00.00]}')
+
+
+                    board2.push_san(bot_move)
+
+                    print(bot_move)
+
+                    pgn = StringIO(f'[Event "Live Chess"] \n[Site "-"] \n[Date "-"] \n[Round "-"] \n[White "{WHITE}"] \n[Black "{BLACK}"] \n[Result "0-0"] \n[WhiteElo "0"] \n[BlackElo "0"] \n[TimeControl "0"] \n[EndTime "0"] \n[Termination 0"] \n\n{moves_str}')
+
+                    #moves_str = str(moves).replace("[", "")
+                    #moves_str = moves_str.replace("]", "")
+                    #moves_str = moves_str.replace("'", "")
+                    #moves_str = moves_str.replace(",", "")
+
+                #pgn = f'[Event "Live Chess"] \n[Site "-"] \n[Date "-"] \n[Round "-"] \n[White "{WHITE}"] \n[Black "{BLACK}"] \n[Result "0-0"] \n[WhiteElo "0"] \n[BlackElo "0"] \n[TimeControl "0"] \n[EndTime "0"] \n[Termination 0"] \n\n{moves_str}'
+                #pgn = StringIO(pgn)
+
+
+
+
+                """if y_val.argmax().item() == y_test[iteration]:  #   IF models chess move aligns with the test data
+            correct += 1
+            print(f'{iteration+1}.) {str(y_val.argmax().item())},       {y_test[iteration]},    Correct')
+        else:
+            print(f'{iteration+1}.) {str(y_val.argmax().item())},       {y_test[iteration]},    Wrong')
+
+    print(f'We got {correct}/{len(X_test)} correct')""" 

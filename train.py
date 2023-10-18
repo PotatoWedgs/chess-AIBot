@@ -56,18 +56,14 @@ class ChessNeuralNetwork(nn.Module):
     def forward(self, x): 
         return self.mod(x)
 
-
-# Instance of the neural network, loss, optimizer 
-model = ChessNeuralNetwork().cuda()
-optimizer = Adam(model.parameters(), lr=0.001)
-criterion = nn.CrossEntropyLoss() 
-
-
-# Training/Testing flow 
-if __name__ == "__main__": 
+def train():
+    # Instance of the neural network, loss, optimizer 
+    model = ChessNeuralNetwork().cuda()
+    optimizer = Adam(model.parameters(), lr=0.001)
+    criterion = nn.CrossEntropyLoss() 
 
     #   Training through 50000 epochs
-    for i in range(50000):
+    for i in range(100):
 
 
         #   Predicting and finding the loss
