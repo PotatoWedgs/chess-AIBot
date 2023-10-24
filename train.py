@@ -50,7 +50,7 @@ class ChessNeuralNetwork(nn.Module):
             nn.LeakyReLU(),
             nn.Linear(100, 100),
             nn.LeakyReLU(),
-            nn.Linear(100, 4096),
+            nn.Linear(100, 4032),
         )
 
     def forward(self, x): 
@@ -63,7 +63,7 @@ def train():
     criterion = nn.CrossEntropyLoss() 
 
     #   Training through 50000 epochs
-    for i in range(100):
+    for i in range(100000):
 
 
         #   Predicting and finding the loss

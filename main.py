@@ -143,119 +143,152 @@ def convert(username, pgn):
     return df.to_numpy()
 
 
+
+def largest_values_index(lst):
+    sorted_indices = sorted(range(len(lst)), key=lambda i: lst[i], reverse=True)
+
+    return sorted_indices
+
+
+
 if __name__ == "__main__": 
-    #with open('current_game.pgn', 'w') as current_game_pgn:
     with torch.no_grad():   #   Turning off back propogation
-        board2 = chess.Board()
+        board2 = chess.Board()  #   Loading the board
 
-        username = 'Potato'
-        username_color = 'w'
+        #   Input from the user
+        username = input('Input your username in the game: ')   
+        username_color = input('Input your colour in the game: ')
 
-        moves = []
-        move_count = 1
-        square_index = ['', 'a1', 'b1', 'c1', 'd1', 'e1', 'f1', 'g1', 'h1', 'a2', 'b2', 'c2', 'd2', 'e2', 'f2', 'g2', 'h2', 'a3', 'b3', 'c3', 'd3', 'e3', 'f3', 'g3', 'h3', 'a4', 'b4', 'c4', 'd4', 'e4', 'f4', 'g4', 'h4', 'a5', 'b5', 'c5', 'd5', 'e5', 'f5', 'g5', 'h5', 'a6', 'b6', 'c6', 'd6', 'e6', 'f6', 'g6', 'h6', 'a7', 'b7', 'c7', 'd7', 'e7', 'f7', 'g7', 'h7', 'a8', 'b8', 'c8', 'd8', 'e8', 'f8', 'g8', 'h8']
+        should_break = False
+
+        moves = []  #   Moves list to be appended to the PGN file
         moves_str = ''
+        move_count = 1  #   Keeping track the move count
 
+        #   To be index for numbered positions
+        square_index = ['', 'a1', 'b1', 'c1', 'd1', 'e1', 'f1', 'g1', 'h1', 'a2', 'b2', 'c2', 'd2', 'e2', 'f2', 'g2', 'h2', 'a3', 'b3', 'c3', 'd3', 'e3', 'f3', 'g3', 'h3', 'a4', 'b4', 'c4', 'd4', 'e4', 'f4', 'g4', 'h4', 'a5', 'b5', 'c5', 'd5', 'e5', 'f5', 'g5', 'h5', 'a6', 'b6', 'c6', 'd6', 'e6', 'f6', 'g6', 'h6', 'a7', 'b7', 'c7', 'd7', 'e7', 'f7', 'g7', 'h7', 'a8', 'b8', 'c8', 'd8', 'e8', 'f8', 'g8', 'h8']
+        
+        #   Boolean version of either white or black (set to white)
         bool_color = True
 
+        #   Setting up the user and the CPU colours for the game
         if username_color == "b":
-            WHITE = "---"
+            WHITE = "CPU"
             BLACK = username
             bool_color = False
 
         elif username_color == "w":
             WHITE = username
-            BLACK = "---"
+            BLACK = "CPU"
             bool_color = True
 
+        #   Loading the model
         new_model = train.ChessNeuralNetwork().cuda()
         new_model.load_state_dict(torch.load('model.pt'))
 
-        while board2.is_checkmate() == False:
+        #   Saving iterations of moves to not re-process moves again
+        move_skipper = []
 
-            if board2.turn == bool_color:
-                player_move = input('Play move (SAN): ')
+        #   Playing until the game ends
+        while not board2.is_game_over():
 
-                if board2.turn == True:     #   Black
+            if board2.turn == bool_color:   #   IF its the users turn to play
+                print('\n\n')
+                player_move = input('Play move (SAN): ')    #   Inputting their move
+
+                #   Recording moves in PGN
+                if board2.turn == False:     #   Black
                     moves.append(f'{move_count}... {player_move}' + ' {[%clk 0:00:00.00]}')
 
                     move_count += 1
 
-                elif board2.turn == False:
+                elif board2.turn == True:   #   White
                     moves.append(f'{move_count}. {player_move}' + ' {[%clk 0:00:00.00]}')
 
-
+                #   Playing the user's move
                 board2.push_san(player_move)
-            
+
+                #   Making the list of moves a string
                 moves_str = str(moves).replace("[", "")
                 moves_str = moves_str.replace("]", "")
                 moves_str = moves_str.replace("'", "")
                 moves_str = moves_str.replace(",", "")
 
+                #   Saving the PGN
                 pgn = StringIO(f'[Event "Live Chess"] \n[Site "-"] \n[Date "-"] \n[Round "-"] \n[White "{WHITE}"] \n[Black "{BLACK}"] \n[Result "0-0"] \n[WhiteElo "0"] \n[BlackElo "0"] \n[TimeControl "0"] \n[EndTime "0"] \n[Termination 0"] \n\n{moves_str}')
-
 
             else:
-                #try:
-                
-                moves_str = str(moves).replace("[", "")
-                moves_str = moves_str.replace("]", "")
-                moves_str = moves_str.replace("'", "")
-                moves_str = moves_str.replace(",", "")
 
-                pgn = StringIO(f'[Event "Live Chess"] \n[Site "-"] \n[Date "-"] \n[Round "-"] \n[White "{WHITE}"] \n[Black "{BLACK}"] \n[Result "0-0"] \n[WhiteElo "0"] \n[BlackElo "0"] \n[TimeControl "0"] \n[EndTime "0"] \n[Termination 0"] \n\n{moves_str}')
+                #   Computer tries convert PGN and helps distinguish the colour of the computer on the first move
+                try:
+                    data = convert("CPU", pgn)
+                    data_tensor = torch.FloatTensor(data)
 
-                data = convert(username, pgn)
-                data_tensor = torch.FloatTensor(data)
-
-                print(data)
-
-                """except:
-                    print('no')
+                except:
                     data = np.array([[64.0,63.0,62.0,61.0,60.0,59.0,58.0,57.0,56.0,55.0,54.0,53.0,52.0,50.0,49.0,35.0,16.0,15.0,14.0,13.0,12.0,11.0,10.0,9.0,8.0,7.0,6.0,5.0,4.0,3.0,2.0,1.0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]])
-                    data_tensor = torch.FloatTensor(data)"""
-                            
+                    data_tensor = torch.FloatTensor(data)
+
+
+                #   Going over the data of tokenized positions in chess
                 for iteration, tensor_data in enumerate(data_tensor):    
+                    if iteration in move_skipper:   #   Ensuring we don't reprocesses any positions
+                        continue
+                    else:
+                        
+                        y_val = new_model.forward(tensor_data.cuda())  #   Evaluating the test dataset
+        
+                        evaluation = []
 
-                    y_val = new_model.forward(tensor_data.cuda())  #   Evaluating the test dataset
+                        #   Going over the evaluation values and appending to a list
+                        for iteration, value in enumerate(y_val):
+                            evaluation.append(value)
 
-                    start_square = combinations[y_val.argmax().item()][0]
-                    end_square = combinations[y_val.argmax().item()][1]
+                        #   Going over the indexes of the evaluation values
+                        for index in largest_values_index(evaluation):
 
-                    uci = chess.Move.from_uci(f'{square_index[start_square]}{square_index[end_square]}')
-                    bot_move = board2.san(uci)
+                            #   Setting the UCI string format
+                            start_square = combinations[index][0]
+                            end_square = combinations[index][1]
 
+                            uci = chess.Move.from_uci(f'{square_index[start_square]}{square_index[end_square]}')    #   Converting a string to UCI format
 
-                    if board2.turn == True:     #   Black
-                        moves.append(f'{move_count}... {bot_move}' + ' {[%clk 0:00:00.00]}')
+                            if board2.is_legal(uci):    #   IF UCI move is legal
+                                bot_move = board2.san(uci)  #   Converting UCI to SAN
 
-                        move_count += 1
+                                #   Recording moves in PGN
+                                if board2.turn == True:     #   Black
+                                    moves.append(f'{move_count}. {bot_move}' + ' {[%clk 0:00:00.00]}')
 
-                    elif board2.turn == False:
-                        moves.append(f'{move_count}. {bot_move}' + ' {[%clk 0:00:00.00]}')
+                                elif board2.turn == False:   #   White
+                                    moves.append(f'{move_count}... {bot_move}' + ' {[%clk 0:00:00.00]}')
 
+                                    move_count += 1
 
-                    board2.push_san(bot_move)
+                                #   Making the list of moves a string
+                                moves_str = str(moves).replace("[", "")
+                                moves_str = moves_str.replace("]", "")
+                                moves_str = moves_str.replace("'", "")
+                                moves_str = moves_str.replace(",", "")
 
-                    print(bot_move)
+                                #   Saving the PGN and playing the computer move
+                                pgn = StringIO(f'[Event "Live Chess"] \n[Site "-"] \n[Date "-"] \n[Round "-"] \n[White "{WHITE}"] \n[Black "{BLACK}"] \n[Result "0-0"] \n[WhiteElo "0"] \n[BlackElo "0"] \n[TimeControl "0"] \n[EndTime "0"] \n[Termination 0"] \n\n{moves_str}')
+                                board2.push_san(bot_move)
+                                
+                                print('CPU Played:', bot_move, '\n\n')
+                
+                                #   Keeping track the moves we processed already
+                                move_skipper.append(iteration)
 
-                    pgn = StringIO(f'[Event "Live Chess"] \n[Site "-"] \n[Date "-"] \n[Round "-"] \n[White "{WHITE}"] \n[Black "{BLACK}"] \n[Result "0-0"] \n[WhiteElo "0"] \n[BlackElo "0"] \n[TimeControl "0"] \n[EndTime "0"] \n[Termination 0"] \n\n{moves_str}')
+                                #   All this code down below is to ensure we don't have the bot play more moves then what is maximum (1 move)
+                                should_break = True
+                                break
 
-                    #moves_str = str(moves).replace("[", "")
-                    #moves_str = moves_str.replace("]", "")
-                    #moves_str = moves_str.replace("'", "")
-                    #moves_str = moves_str.replace(",", "")
+                            if should_break == True:
+                                break
 
-                #pgn = f'[Event "Live Chess"] \n[Site "-"] \n[Date "-"] \n[Round "-"] \n[White "{WHITE}"] \n[Black "{BLACK}"] \n[Result "0-0"] \n[WhiteElo "0"] \n[BlackElo "0"] \n[TimeControl "0"] \n[EndTime "0"] \n[Termination 0"] \n\n{moves_str}'
-                #pgn = StringIO(pgn)
+                        if should_break == True:
+                            should_break = False
+                            break
 
-
-
-
-                """if y_val.argmax().item() == y_test[iteration]:  #   IF models chess move aligns with the test data
-            correct += 1
-            print(f'{iteration+1}.) {str(y_val.argmax().item())},       {y_test[iteration]},    Correct')
-        else:
-            print(f'{iteration+1}.) {str(y_val.argmax().item())},       {y_test[iteration]},    Wrong')
-
-    print(f'We got {correct}/{len(X_test)} correct')""" 
+            
+            
