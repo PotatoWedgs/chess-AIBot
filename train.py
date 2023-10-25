@@ -62,7 +62,7 @@ def train():
     optimizer = Adam(model.parameters(), lr=0.001)
     criterion = nn.CrossEntropyLoss() 
 
-    #   Training through 50000 epochs
+    #   Training through 100000 epochs
     for i in range(100000):
 
 
