@@ -152,7 +152,7 @@ def largest_values_index(lst):
 
 
 if __name__ == "__main__": 
-    #with torch.no_grad():   #   Turning off back propogation
+    with torch.no_grad():   #   Turning off back propogation
         board2 = chess.Board()  #   Loading the board
 
         #   Input from the user
