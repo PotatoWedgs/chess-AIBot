@@ -81,21 +81,5 @@ def train():
         loss.backward()
         optimizer.step()
 
-    """#   Testing
-    with torch.no_grad():   #   Turning off back propogation
-
-        correct = 0
-        
-        for iteration, tensor_data in enumerate(X_test):    
-            y_val = model.forward(tensor_data.cuda())  #   Evaluating the test dataset
-
-            if y_val.argmax().item() == y_test[iteration]:  #   IF models chess move aligns with the test data
-                correct += 1
-                print(f'{iteration+1}.) {str(y_val)},       {y_test[iteration]},    Correct')
-            else:
-                #print(f'{iteration+1}.) {str(y_val)},       {y_test[iteration]},    Wrong')
-                pass
-        print(f'We got {correct}/{len(X_test)} correct')"""
-
     #   Saving the model parameters
     torch.save(model.state_dict(), 'model.pt')
