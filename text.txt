@@ -1,0 +1,155 @@
+Play move (SAN): d4
+h5 tensor(453.7500, device='cuda:0')
+f6 tensor(423.7483, device='cuda:0')
+Nf6 tensor(399.7151, device='cuda:0')
+CPU Played: Nc6 
+
+
+
+
+
+Play move (SAN): Nc3
+f6 tensor(312.8894, device='cuda:0')
+d6 tensor(312.8444, device='cuda:0')
+e6 tensor(311.8065, device='cuda:0')
+CPU Played: g6 
+
+
+
+
+
+Play move (SAN): Bf4
+f6 tensor(312.8894, device='cuda:0')
+d6 tensor(312.8444, device='cuda:0')
+e6 tensor(311.8065, device='cuda:0')
+CPU Played: b6 
+
+
+
+
+
+Play move (SAN): e3
+f6 tensor(312.8894, device='cuda:0')
+d6 tensor(312.8444, device='cuda:0')
+e6 tensor(311.8065, device='cuda:0')
+CPU Played: Nf6 
+
+
+
+
+
+Play move (SAN): h4
+d6 tensor(312.8444, device='cuda:0')
+e6 tensor(311.8065, device='cuda:0')
+e5 tensor(290.7113, device='cuda:0')
+CPU Played: h5
+
+
+
+
+
+Play move (SAN): Be2
+d6 tensor(312.8444, device='cuda:0')
+e6 tensor(311.8065, device='cuda:0')
+e5 tensor(290.7113, device='cuda:0')
+CPU Played: d5
+
+
+
+
+
+Play move (SAN): f3
+e6 tensor(311.8065, device='cuda:0')
+e5 tensor(290.7113, device='cuda:0')
+Be6 tensor(287.5663, device='cuda:0')
+CPU Played: Bf5
+
+
+
+
+
+Play move (SAN): g4
+e6 tensor(311.8065, device='cuda:0')
+e5 tensor(290.7113, device='cuda:0')
+Bg7 tensor(266.6306, device='cuda:0')
+CPU Played: Ne5
+
+
+
+
+
+Play move (SAN): dxe5
+e6 tensor(311.8065, device='cuda:0')
+c6 tensor(310.0250, device='cuda:0')
+c5 tensor(281.7366, device='cuda:0')
+CPU Played: Bg7
+
+
+
+
+
+Play move (SAN): exf6
+e6 tensor(311.8065, device='cuda:0')
+c6 tensor(310.0250, device='cuda:0')
+O-O tensor(291.0501, device='cuda:0')
+CPU Played: e5
+
+
+
+
+
+Play move (SAN): fxg7
+f6 tensor(312.8894, device='cuda:0')
+c6 tensor(310.0250, device='cuda:0')
+Qf6 tensor(289.8653, device='cuda:0')
+CPU Played: Ke7
+
+
+
+
+
+Play move (SAN): Bg5+
+f6 tensor(312.8894, device='cuda:0')
+Ke6 tensor(311.8065, device='cuda:0')
+Ke8 tensor(208.6312, device='cuda:0')
+CPU Played: Kd7
+
+
+
+
+
+Play move (SAN): Bxd8
+f6 tensor(312.8894, device='cuda:0')
+Kd6 tensor(312.8444, device='cuda:0')
+c6 tensor(310.0250, device='cuda:0')
+CPU Played: c5
+
+
+
+
+
+Play move (SAN): gxh8=Q
+f6 tensor(312.8894, device='cuda:0')
+Kd6 tensor(312.8444, device='cuda:0')
+e4 tensor(255.3784, device='cuda:0')
+CPU Played: a5
+
+
+
+
+
+Play move (SAN): gxf5
+f6 tensor(312.8894, device='cuda:0')
+Kd6 tensor(312.8444, device='cuda:0')
+e4 tensor(255.3784, device='cuda:0')
+CPU Played: Kc6
+
+
+
+
+
+Play move (SAN): Qxe5
+f6 tensor(312.8894, device='cuda:0')
+Rxd8 tensor(188.6652, device='cuda:0')
+c4 tensor(139.2284, device='cuda:0')
+CPU Played: d4
